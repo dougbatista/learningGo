@@ -6,12 +6,8 @@ import (
 )
 
 func main() {
-	contaDouglas := contas.ContaCorrente{Titular: "Douglas", Saldo: 225.5}
-	contaEdgar := contas.ContaCorrente{Titular: "Edgar", Saldo: 300}
+	contaExemplo := contas.ContaCorrente{}
+	contaExemplo.Depositar(100)
 
-	satatus := contaDouglas.Transferir(200, &contaEdgar)
-	fmt.Println(satatus)
-
-	fmt.Println(contaDouglas)
-	fmt.Println(contaEdgar)
+	fmt.Println(contaExemplo.ObterSaldo())
 }
